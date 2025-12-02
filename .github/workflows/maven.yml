@@ -52,7 +52,7 @@ jobs:
           username: ${{secrets.DOCKER_HUB_USERNAME}}
           password: ${{secrets.DOCKER_HUB_ACCESS_TOKEN}}
 
-      - name: Push Docker image to DOcker Hub
+      - name: Push Docker image to Docker Hub
         uses: docker/build-push-action@v5
         with:
           context: .  # Tells the actions to use the Dockerfile in the root directory to build image
