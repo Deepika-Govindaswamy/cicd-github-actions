@@ -43,7 +43,7 @@ jobs:
           context: .  # Tells the actions to use the Dockerfile in the root directory to build image
 #          dockerfile: Dockerfile
           push: 'false'  # Tells if the image needs to be pushed into the docker hub or not.
-          tags:  ${{secrets.DOCKER_HUB_USERNAME}}/spring-boot-cicd:$(date-'%Y-%m-%d%H-%M-%S') # the tag need to be in the format of 'your-dockerhub-username/my-app:version'
+          tags:  ${{secrets.DOCKER_HUB_USERNAME}}/spring-boot-cicd:latest # the tag need to be in the format of 'your-dockerhub-username/my-app:version'
 
 
       - name: Login to Docker Hub
@@ -58,6 +58,6 @@ jobs:
           context: .  # Tells the actions to use the Dockerfile in the root directory to build image
 #          dockerfile: Dockerfile
           push: true  # Tells if the image needs to be pushed into the docker hub or not.
-          tags: ${{secrets.DOCKER_HUB_USERNAME}}/spring-boot-cicd:$(date-'%Y-%m-%d%H-%M-%S') # the tag need to be in the format of 'your-dockerhub-username/my-app:version'
+          tags: ${{secrets.DOCKER_HUB_USERNAME}}/spring-boot-cicd:latest # the tag need to be in the format of 'your-dockerhub-username/my-app:version'
 
 
